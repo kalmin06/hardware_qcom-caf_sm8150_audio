@@ -78,11 +78,11 @@ LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES := \
         external/tinyalsa/include \
-        $(TOP)/hardware/qcom/audio-caf-sm8150 \
+        $(TOP)/hardware/qcom/audio-caf/sm8150/hal \
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include \
         $(call include-path-for, audio-effects) \
-        $(TOP)/hardware/qcom/audio-caf-sm8150/audio_extn/
+        $(TOP)/hardware/qcom/audio-caf/sm8150/hal/audio_extn/
 
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DLKM)),true)
   LOCAL_HEADER_LIBRARIES += audio_kernel_headers
@@ -184,13 +184,13 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_C_INCLUDES := \
-        $(TOP)/hardware/qcom/audio-caf-sm8150 \
+        $(TOP)/hardware/qcom/audio-caf/sm8150/hal \
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
         $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include \
         external/tinyalsa/include \
         $(call include-path-for, audio-effects) \
         $(call include-path-for, audio-route) \
-        $(TOP)/hardware/qcom/audio-caf-sm8150/audio_extn \
+        $(TOP)/hardware/qcom/audio-caf/sm8150/hal/audio_extn \
         external/tinycompress/include \
         system/media/audio_utils/include
 
